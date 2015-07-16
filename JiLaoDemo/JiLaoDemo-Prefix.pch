@@ -1,0 +1,34 @@
+//
+//  JiLaoDemo-Prefix.pch
+//  JiLaoDemo
+//
+//  Created by okwei on 15/7/9.
+//  Copyright (c) 2015年 Donny.Justin. All rights reserved.
+//
+
+#ifndef JiLaoDemo_JiLaoDemo_Prefix_pch
+#define JiLaoDemo_JiLaoDemo_Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#endif
+
+
+#define DistanceFromTopGuiden(view) (view.frame.origin.y + view.frame.size.height)
+#define DistanceFromLeftGuiden(view) (view.frame.origin.x + view.frame.size.width)
+#define ScreenSize [UIScreen mainScreen].bounds.size
+#define PrintRect(frame) NSLog(@"X:%f,Y:%f,W:%f,H:%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height)
+#define BadgeViewCountChangedNotification @"BadgeViewCountChangedNotification"
+
+#import "chatButton.h"
+#import "ChatInputTextView.h"
+#import "MyLibs.h"
+#import "OtherSelectionsBaseView.h"
+#import "DJ_BaseView.h"
+#import "DJ_BadgeAlertView.h"
+#import "ELCImagePickerController.h"
+
+
+#endif
