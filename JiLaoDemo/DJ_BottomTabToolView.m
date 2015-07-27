@@ -1,21 +1,21 @@
 //
-//  bottomTabToolView.m
+//  DJ_BottomTabToolView.m
 //  JiLaoDemo
 //
-//  Created by okwei on 15/7/9.
+//  Created by okwei on 15/7/27.
 //  Copyright (c) 2015年 Donny.Justin. All rights reserved.
 //
 
-#import "bottomTabToolView.h"
+#import "DJ_BottomTabToolView.h"
 
-@interface bottomTabToolView()<UITextViewDelegate>
+@interface DJ_BottomTabToolView()<UITextViewDelegate>
 
 @property (nonatomic,strong) UIButton * sendButton;//发送按钮
 @property (nonatomic,strong) UILabel * placeholderLabel;//占位label
 @property (nonatomic,strong) DJ_BadgeAlertView * badgeView;
 @end
 
-@implementation bottomTabToolView{
+@implementation DJ_BottomTabToolView{
     CGFloat BottomTabToolViewHeight;
 }
 
@@ -39,7 +39,7 @@
 }
 #pragma mark - textViewEditChanged
 -(void)textViewEditChanged:(NSNotification *)obj{
-    ChatInputTextView *textView = (ChatInputTextView *)obj.object;
+    DJ_ChatInputTextView *textView = (DJ_ChatInputTextView *)obj.object;
     if (textView.text.length > 0) {
         [self.sendButton setBackgroundColor:[UIColor redColor]];
         [self.sendButton setEnabled:YES];
@@ -71,7 +71,7 @@
     }
 }
 #pragma mark - moreItemsButtonClick 更多选项按钮
--(void)moreItemsButtonClick:(chatButton *)btn{
+-(void)moreItemsButtonClick:(DJ_ChatButton *)btn{
     if (btn.openType == ChatButtonOpenTypeHideSelectionView) {//隐藏
         [self.delegate showOtherItemsView:ChatButtonOpenTypeShowSelectionView andISResetKeyboard:NO];
     }else if(btn.openType == ChatButtonOpenTypeShowSelectionView){//显示
@@ -98,9 +98,9 @@
     [self.badgeView setFrame:CGRectMake(DistanceFromLeftGuiden(self.moreItemsButton)-10, 0, 15, 15)];
 }
 
--(chatButton *)moreItemsButton{
+-(DJ_ChatButton *)moreItemsButton{
     if (!_moreItemsButton) {
-        _moreItemsButton = [chatButton buttonWithType:UIButtonTypeCustom];
+        _moreItemsButton = [DJ_ChatButton buttonWithType:UIButtonTypeCustom];
         [_moreItemsButton setImage:[UIImage imageNamed:@"chatAddDocButton.png"] forState:UIControlStateNormal];
         [_moreItemsButton setImageEdgeInsets:UIEdgeInsetsZero];
         [_moreItemsButton addTarget:self action:@selector(moreItemsButtonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -122,9 +122,9 @@
     return _sendButton;
 }
 
--(ChatInputTextView *)inputTextView{
+-(DJ_ChatInputTextView *)inputTextView{
     if (!_inputTextView) {
-        _inputTextView = [[ChatInputTextView alloc] init];
+        _inputTextView = [[DJ_ChatInputTextView alloc] init];
         [_inputTextView.layer setBorderWidth:1];
         [_inputTextView.layer setBorderColor:[UIColor colorWithWhite:0.7 alpha:1].CGColor];
         [_inputTextView setDelegate:self];
@@ -151,8 +151,6 @@
     }
     return _badgeView;
 }
-
-
 
 
 @end

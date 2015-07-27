@@ -29,7 +29,7 @@
     return self;
 }
 -(void)showBadgeAlertViewCount:(NSNotification *)noti{
-    NSLog(@"%@",[noti.userInfo objectForKey:@"badgeCount"]);
+//    NSLog(@"%@",[noti.userInfo objectForKey:@"badgeCount"]);
     if ([[noti.userInfo objectForKey:@"badgeCount"] integerValue] > 0) {
         [self setBackgroundColor:[UIColor redColor]];
         [self.layer setCornerRadius:self.frame.size.width/2];

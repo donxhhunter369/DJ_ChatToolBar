@@ -1,8 +1,8 @@
 //
-//  chatButton.h
+//  DJ_ChatButton.h
 //  JiLaoDemo
 //
-//  Created by okwei on 15/7/9.
+//  Created by okwei on 15/7/27.
 //  Copyright (c) 2015年 Donny.Justin. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, ChatButtonOpenType) {
     ChatButtonOpenTypeHideSelectionView//隐藏selection视图
 };
 
-@interface chatButton : UIButton
+
+@interface DJ_ChatButton : UIButton
 @property (nonatomic,assign) ChatButtonOpenType openType;
 @end

@@ -1,18 +1,18 @@
 //
-//  OtherSelectionsBaseView.m
+//  DJ_OtherSelectionsBaseView.m
 //  JiLaoDemo
 //
-//  Created by okwei on 15/7/16.
+//  Created by okwei on 15/7/27.
 //  Copyright (c) 2015年 Donny.Justin. All rights reserved.
 //
 
-#import "OtherSelectionsBaseView.h"
+#import "DJ_OtherSelectionsBaseView.h"
 
-@interface OtherSelectionsBaseView()
+@interface DJ_OtherSelectionsBaseView()
 @property (nonatomic,strong) DJ_BadgeAlertView * badgeView;
 @end
 
-@implementation OtherSelectionsBaseView
+@implementation DJ_OtherSelectionsBaseView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -31,9 +31,9 @@
     }
     return _badgeView;
 }
--(chatButton *)selectionButton{
+-(DJ_ChatButton *)selectionButton{
     if (!_selectionButton) {
-        _selectionButton = [chatButton buttonWithType:UIButtonTypeCustom];
+        _selectionButton = [DJ_ChatButton buttonWithType:UIButtonTypeCustom];
         [_selectionButton setUserInteractionEnabled:NO];
     }
     return _selectionButton;
@@ -44,5 +44,6 @@
     [self.selectionButton setFrame:CGRectMake(10, 10, self.frame.size.width-20, self.frame.size.height-20)];
     [self.badgeView setFrame:CGRectMake(DistanceFromLeftGuiden(self.selectionButton)-10, 0, 15, 15)];
 }
+
 
 @end

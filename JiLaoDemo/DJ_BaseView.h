@@ -10,7 +10,11 @@
 
 typedef enum : NSUInteger {
     OtherSelectionsViewItemTypeDefault = 10000,
-    OtherSelectionsViewItemTypeImage,
+    OtherSelectionsViewItemTypeImage,//图片
+    OtherSelectionsViewItemTypeVoice,//语音
+    OtherSelectionsViewItemTypeFriend,//好友
+    OtherSelectionsViewItemTypeLocation,//定位
+    OtherSelectionsViewItemTypeBubble,//气泡
 } OtherSelectionsViewItemType;
 
 @interface DJ_BaseView : UIView

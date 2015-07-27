@@ -1,23 +1,23 @@
 //
-//  ImageItemView.m
+//  DJ_ImageItemView.m
 //  JiLaoDemo
 //
-//  Created by okwei on 15/7/14.
+//  Created by okwei on 15/7/27.
 //  Copyright (c) 2015年 Donny.Justin. All rights reserved.
 //
 
-#import "ImageItemView.h"
+#import "DJ_ImageItemView.h"
 
 #define ImageHeigt 110
 #define ImageWidth 70
 
-@interface ImageItemView()
+@interface DJ_ImageItemView()
 @property (nonatomic,strong) UIImageView * defaultImageView;
 @property (nonatomic,strong) UIImageView * imageView;
 @property (nonatomic,strong) UIButton * deleteButton;
 @end
 
-@implementation ImageItemView
+@implementation DJ_ImageItemView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -105,4 +105,5 @@
     }
     return _deleteButton;
 }
+
 @end

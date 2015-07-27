@@ -1,13 +1,13 @@
 //
-//  OtherItemsView.m
+//  DJ_OtherItemsView.m
 //  JiLaoDemo
 //
-//  Created by okwei on 15/7/10.
+//  Created by okwei on 15/7/27.
 //  Copyright (c) 2015年 Donny.Justin. All rights reserved.
 //
 
-#import "OtherItemsView.h"
-#import "ImageItemView.h"
+#import "DJ_OtherItemsView.h"
+#import "DJ_ImageItemView.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "ELCImagePickerHeader.h"
 
@@ -16,13 +16,13 @@
 #define ItemViewWidth 80
 #define ItemViewHeigth 120
 
-@interface OtherItemsView()<ImageItemViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate,ELCImagePickerControllerDelegate, UIScrollViewDelegate>
+@interface DJ_OtherItemsView()<ImageItemViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate,ELCImagePickerControllerDelegate, UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView * myScrollView;
 @property (nonatomic,strong) UILabel * imageCountLabel;//选择了多少张图片，还可以选择多少张
-@property (nonatomic,strong) ImageItemView * defaultImageItemView;
+@property (nonatomic,strong) DJ_ImageItemView * defaultImageItemView;
 @end
 
-@implementation OtherItemsView
+@implementation DJ_OtherItemsView
 
 -(instancetype)init{
     self = [super init];
@@ -52,16 +52,16 @@
         if (![self.itemsArray containsObject:self.defaultImageItemView])
             [self.itemsArray addObject:self.defaultImageItemView];
     }
-
+    
     [self addSubview:self.imageCountLabel];
     for (int i = 0; i < self.itemsArray.count; i++) {
-        [(ImageItemView *)self.itemsArray[i] setFrame:CGRectMake(15*(i+1) + ItemViewWidth * i, 0, ItemViewWidth, ItemViewHeigth)];
-        [self.myScrollView addSubview:(ImageItemView *)self.itemsArray[i]];
+        [(DJ_ImageItemView *)self.itemsArray[i] setFrame:CGRectMake(15*(i+1) + ItemViewWidth * i, 0, ItemViewWidth, ItemViewHeigth)];
+        [self.myScrollView addSubview:(DJ_ImageItemView *)self.itemsArray[i]];
     }
     [self.myScrollView setContentSize:CGSizeMake(ItemViewWidth * self.itemsArray.count + 15*(self.itemsArray.count+1), ItemViewHeigth)];
     [self.myScrollView scrollRectToVisible:CGRectMake(ItemViewWidth * self.itemsArray.count, 0, ItemViewWidth, ItemViewHeigth) animated:YES];
     [self addSubview:self.myScrollView];
-
+    
     self.itemsArray.count > 1 ? ({
         [self.imageCountLabel setText:[NSString stringWithFormat:@"已选%lu张，还可以添加%lu张",self.itemsArray.count-1,ImageCount-(self.itemsArray.count-1)]];
     }) : ({
@@ -76,15 +76,15 @@
 }
 
 #pragma mark - ImageItemViewDelegate
--(void)clickDefaultImage:(ImageItemView *)imageItemView{
+-(void)clickDefaultImage:(DJ_ImageItemView *)imageItemView{
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"添加图片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照上传",@"从相册选取", nil];
     [sheet showInView:self.window];
     [self resetUI];
 }
--(void)clickImage:(ImageItemView *)imageItemView{
+-(void)clickImage:(DJ_ImageItemView *)imageItemView{
     NSLog(@"图片处理");
 }
--(void)clickDeleteButton:(ImageItemView *)imageItemView{
+-(void)clickDeleteButton:(DJ_ImageItemView *)imageItemView{
     if ([self.itemsArray containsObject:imageItemView]) {
         [self.itemsArray removeObject:imageItemView];
         [imageItemView removeFromSuperview];
@@ -130,8 +130,8 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     CGSize size = CGSizeMake(ItemViewWidth-10, ItemViewHeigth-10); //缩放到160x160
-    UIImage * reSizeImage = [MyLibs scaleImage:image ToSize:size];
-    ImageItemView * imageItemView = [[ImageItemView alloc] init];
+    UIImage * reSizeImage = [DJ_MyLibs scaleImage:image ToSize:size];
+    DJ_ImageItemView * imageItemView = [[DJ_ImageItemView alloc] init];
     [imageItemView setIsDefaultImage:NO];
     [imageItemView setDelegate:self];
     [imageItemView setImage:reSizeImage];
@@ -153,8 +153,8 @@
             if ([dict objectForKey:UIImagePickerControllerOriginalImage]){
                 UIImage* image=[dict objectForKey:UIImagePickerControllerOriginalImage];
                 CGSize size = CGSizeMake(ItemViewWidth-10, ItemViewHeigth-10); //缩放到160x160
-                UIImage * reSizeImage = [MyLibs scaleImage:image ToSize:size];
-                ImageItemView * imageItemView = [[ImageItemView alloc] init];
+                UIImage * reSizeImage = [DJ_MyLibs scaleImage:image ToSize:size];
+                DJ_ImageItemView * imageItemView = [[DJ_ImageItemView alloc] init];
                 [imageItemView setIsDefaultImage:NO];
                 [imageItemView setDelegate:self];
                 [imageItemView setImage:reSizeImage];
@@ -166,8 +166,8 @@
             if ([dict objectForKey:UIImagePickerControllerOriginalImage]){
                 UIImage* image=[dict objectForKey:UIImagePickerControllerOriginalImage];
                 CGSize size = CGSizeMake(ItemViewWidth-10, ItemViewHeigth-10); //缩放到160x160
-                UIImage * reSizeImage = [MyLibs scaleImage:image ToSize:size];
-                ImageItemView * imageItemView = [[ImageItemView alloc] init];
+                UIImage * reSizeImage = [DJ_MyLibs scaleImage:image ToSize:size];
+                DJ_ImageItemView * imageItemView = [[DJ_ImageItemView alloc] init];
                 [imageItemView setIsDefaultImage:NO];
                 [imageItemView setDelegate:self];
                 [imageItemView setImage:reSizeImage];
@@ -179,7 +179,7 @@
             NSLog(@"Uknown asset type");
         }
     }
-
+    
     [self resetUI];
 }
 
@@ -195,9 +195,9 @@
     }
     return _itemsArray;
 }
--(ImageItemView *)defaultImageItemView{
+-(DJ_ImageItemView *)defaultImageItemView{
     if (!_defaultImageItemView) {
-        _defaultImageItemView = [[ImageItemView alloc] init];
+        _defaultImageItemView = [[DJ_ImageItemView alloc] init];
         [_defaultImageItemView setIsDefaultImage:YES];
         [_defaultImageItemView setDelegate:self];
     }
@@ -222,5 +222,6 @@
     }
     return _myScrollView;
 }
+
 
 @end

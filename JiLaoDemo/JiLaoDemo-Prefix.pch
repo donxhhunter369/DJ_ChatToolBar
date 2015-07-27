@@ -15,20 +15,34 @@
 #import <CoreData/CoreData.h>
 #endif
 
-
+#pragma mark - 宏定义
 #define DistanceFromTopGuiden(view) (view.frame.origin.y + view.frame.size.height)
 #define DistanceFromLeftGuiden(view) (view.frame.origin.x + view.frame.size.width)
-#define ScreenSize [UIScreen mainScreen].bounds.size
 #define PrintRect(frame) NSLog(@"X:%f,Y:%f,W:%f,H:%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height)
 #define BadgeViewCountChangedNotification @"BadgeViewCountChangedNotification"
+#define AppDelegateOBJ ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define ViewOrigin(view)    (view.frame.origin)
+#define ViewSize(view)      (view.frame.size)
+#define ScreenSize          [UIScreen mainScreen].bounds.size
+#define SCREEN_WIDTH        ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT       ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH   (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH   (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define BGDefaultColor  [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0]
 
-#import "chatButton.h"
-#import "ChatInputTextView.h"
-#import "MyLibs.h"
-#import "OtherSelectionsBaseView.h"
+#pragma mark - 全局类
+#import "DJ_ChatButton.h"
+#import "DJ_ChatInputTextView.h"
+#import "DJ_MyLibs.h"
+#import "DJ_OtherSelectionsBaseView.h"
 #import "DJ_BaseView.h"
 #import "DJ_BadgeAlertView.h"
 #import "ELCImagePickerController.h"
 
+#pragma mark - BaseViewControllers
+#import "DJBaseNavigationController.h"
+#import "DJBaseTabBarController.h"
+#import "DJBaseViewController.h"
 
 #endif
