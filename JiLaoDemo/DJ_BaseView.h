@@ -17,6 +17,14 @@ typedef enum : NSUInteger {
     OtherSelectionsViewItemTypeBubble,//气泡
 } OtherSelectionsViewItemType;
 
+typedef NS_ENUM(NSUInteger, DJ_OtherItemsViewVoiceType) {
+    DJ_OtherItemsViewVoiceTypeNotVoice = 0,//没有录制
+    DJ_OtherItemsViewVoiceTypeVoiceing,//正在录制
+    DJ_OtherItemsViewVoiceTypeVoiceSuccessed,//录制成功可播放
+    DJ_OtherItemsViewVoiceTypeVoiceStop,//点击停止
+    DJ_OtherItemsViewVoiceTypeVoiceRecordFailure,//录制失败
+};
+
 @interface DJ_BaseView : UIView
 
 @end

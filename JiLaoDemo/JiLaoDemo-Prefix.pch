@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <AVFoundation/AVFoundation.h>
 #endif
 
 #pragma mark - 宏定义
@@ -30,6 +31,11 @@
 #define SCREEN_MAX_LENGTH   (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
 #define SCREEN_MIN_LENGTH   (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
 #define BGDefaultColor  [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0]
+
+
+#pragma mark - 公共头文件
+#import "DJ_Common.h"
+#import "DJ_CommunicationSDK.h"
 
 #pragma mark - 全局类
 #import "DJ_ChatButton.h"

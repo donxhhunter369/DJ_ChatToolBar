@@ -12,4 +12,6 @@
 
 @property (nonatomic,strong) DJ_ChatButton * selectionButton;
 
+@property (nonatomic,assign) OtherSelectionsViewItemType itemType;
+
 @end

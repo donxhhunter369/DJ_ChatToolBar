@@ -10,4 +10,6 @@
 
 @interface DJ_OtherItemsViewVoice : DJ_BaseView
 
+@property (nonatomic,assign) DJ_OtherItemsViewVoiceType voiceType;
+
 @end

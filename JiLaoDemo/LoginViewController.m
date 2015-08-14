@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 #import "DJ_ChatPageViewController.h"
+#import <objc/runtime.h>
+
+
 
 @interface LoginViewController ()
 @property (nonatomic,strong) UIButton * loginButton;

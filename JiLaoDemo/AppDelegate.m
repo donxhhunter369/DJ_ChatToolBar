@@ -22,6 +22,9 @@
     DJBaseNavigationController * nav = [[DJBaseNavigationController alloc] initWithRootViewController:loginVC];
     self.window.rootViewController= nav;
     [self.window makeKeyAndVisible];
+    
+    [DJ_CommunicationSDK logInfo];
+    
     return YES;
 }
 

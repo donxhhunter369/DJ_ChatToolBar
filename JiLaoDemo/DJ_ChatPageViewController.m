@@ -69,6 +69,7 @@
                 [self.otherItemsView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, MyFaceImageOrDocumentViewHeight)];
             }else if (self.otherItemType == OtherSelectionsViewItemTypeVoice){//语音输入
                 [self.otherItemsViewVoice setFrame:CGRectMake(0, 0, SCREEN_WIDTH, MyFaceImageOrDocumentViewHeight)];
+                [self.otherItemsViewVoice setVoiceType:DJ_OtherItemsViewVoiceTypeNotVoice];
             }
         }
     }

@@ -45,7 +45,7 @@
 #pragma mark - voiceView 语音
 -(void)voiceViewTap:(UITapGestureRecognizer *)tap{
     NSLog(@"语音");
-    self.selectionImageView.selectionButton.openType = ChatButtonOpenTypeShowSelectionDetailView;
+    self.voiceView.selectionButton.openType = ChatButtonOpenTypeShowSelectionDetailView;
     self.type = OtherSelectionsViewItemTypeVoice;
     if ([self.delegate respondsToSelector:@selector(OtherSelectionsViewSelectImageItemWithType:)]) {
         [self.delegate OtherSelectionsViewSelectImageItemWithType:OtherSelectionsViewItemTypeVoice];
@@ -76,6 +76,7 @@
         _selectionImageView = [[DJ_OtherSelectionsBaseView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
         [_selectionImageView.selectionButton setImage:[UIImage imageNamed:@"选择照片按钮.png"] forState:UIControlStateNormal];
         [_selectionImageView.selectionButton setTag:10000];
+        [_selectionImageView setItemType:OtherSelectionsViewItemTypeImage];
         [_selectionImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectionImageViewTap:)]];
     }
     return _selectionImageView;
@@ -83,8 +84,9 @@
 -(DJ_OtherSelectionsBaseView *)voiceView{
     if (!_voiceView) {
         _voiceView = [[DJ_OtherSelectionsBaseView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-        [_voiceView.selectionButton setImage:[UIImage imageNamed:@"buy.png"] forState:UIControlStateNormal];
+        [_voiceView.selectionButton setImage:[UIImage imageNamed:@"语音.jpg"] forState:UIControlStateNormal];
         [_voiceView.selectionButton setTag:10001];
+        [_voiceView setItemType:OtherSelectionsViewItemTypeVoice];
         [_voiceView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(voiceViewTap:)]];
     }
     return _voiceView;
@@ -92,8 +94,9 @@
 -(DJ_OtherSelectionsBaseView *)friendView{
     if (!_friendView) {
         _friendView = [[DJ_OtherSelectionsBaseView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-        [_friendView.selectionButton setImage:[UIImage imageNamed:@"relpace.png"] forState:UIControlStateNormal];
+        [_friendView.selectionButton setImage:[UIImage imageNamed:@"好友.jpg"] forState:UIControlStateNormal];
         [_friendView.selectionButton setTag:10002];
+        [_friendView setItemType:OtherSelectionsViewItemTypeFriend];
         [_friendView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(friendViewTap:)]];
     }
     return _friendView;
@@ -101,8 +104,9 @@
 -(DJ_OtherSelectionsBaseView *)locationView{
     if (!_locationView) {
         _locationView = [[DJ_OtherSelectionsBaseView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-        [_locationView.selectionButton setImage:[UIImage imageNamed:@"sale.png"] forState:UIControlStateNormal];
+        [_locationView.selectionButton setImage:[UIImage imageNamed:@"定位.jpg"] forState:UIControlStateNormal];
         [_locationView.selectionButton setTag:10003];
+        [_locationView setItemType:OtherSelectionsViewItemTypeLocation];
         [_locationView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(locationViewTap:)]];
     }
     return _locationView;
@@ -110,8 +114,9 @@
 -(DJ_OtherSelectionsBaseView *)bubbleVuew{
     if (!_bubbleVuew) {
         _bubbleVuew = [[DJ_OtherSelectionsBaseView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-        [_bubbleVuew.selectionButton setImage:[UIImage imageNamed:@"supply.png"] forState:UIControlStateNormal];
+        [_bubbleVuew.selectionButton setImage:[UIImage imageNamed:@"气泡.jpg"] forState:UIControlStateNormal];
         [_bubbleVuew.selectionButton setTag:10004];
+        [_bubbleVuew setItemType:OtherSelectionsViewItemTypeBubble];
         [_bubbleVuew addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bubbleVuewTap:)]];
     }
     return _bubbleVuew;

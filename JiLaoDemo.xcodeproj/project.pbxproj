@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180869AC1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 180869AB1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.m */; };
+		180922761B69BD5D00D81CBA /* libDJ_CommunicationSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180922751B69BD5D00D81CBA /* libDJ_CommunicationSDK.a */; };
+		180A8A1A1B671751007FB298 /* 语音.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A161B671751007FB298 /* 语音.jpg */; };
+		180A8A1B1B671751007FB298 /* 气泡.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A171B671751007FB298 /* 气泡.jpg */; };
+		180A8A1C1B671751007FB298 /* 定位.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A181B671751007FB298 /* 定位.jpg */; };
+		180A8A1D1B671751007FB298 /* 好友.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A191B671751007FB298 /* 好友.jpg */; };
+		180A8A201B671C8D007FB298 /* 录制语音.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A1E1B671C8D007FB298 /* 录制语音.jpg */; };
+		180A8A231B675695007FB298 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A8A221B675695007FB298 /* AVFoundation.framework */; };
+		180A8A251B6756AC007FB298 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A8A241B6756AC007FB298 /* CoreAudio.framework */; };
+		180A8A281B676389007FB298 /* 录制中.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A261B676389007FB298 /* 录制中.jpg */; };
+		180A8A291B676389007FB298 /* 未录制.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A271B676389007FB298 /* 未录制.jpg */; };
+		180A8A2D1B676574007FB298 /* 播放.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A2A1B676574007FB298 /* 播放.jpg */; };
+		180A8A2E1B676574007FB298 /* 暂停.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A2B1B676574007FB298 /* 暂停.jpg */; };
+		180A8A2F1B676574007FB298 /* 重录.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A8A2C1B676574007FB298 /* 重录.jpg */; };
 		184D63B81B4E4FC700EFDE64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D63B71B4E4FC700EFDE64 /* main.m */; };
 		184D63BB1B4E4FC800EFDE64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D63BA1B4E4FC800EFDE64 /* AppDelegate.m */; };
 		184D63C11B4E4FC800EFDE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D63BF1B4E4FC800EFDE64 /* Main.storyboard */; };
@@ -65,6 +79,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180869AA1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJ_VoiceRecordHelper.h; sourceTree = "<group>"; };
+		180869AB1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJ_VoiceRecordHelper.m; sourceTree = "<group>"; };
+		180869AD1B68C1AD00B17CD6 /* DJ_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJ_Common.h; sourceTree = "<group>"; };
+		180922741B69BC7700D81CBA /* DJ_CommunicationSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJ_CommunicationSDK.h; sourceTree = "<group>"; };
+		180922751B69BD5D00D81CBA /* libDJ_CommunicationSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDJ_CommunicationSDK.a; sourceTree = "<group>"; };
+		180A8A161B671751007FB298 /* 语音.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "语音.jpg"; sourceTree = "<group>"; };
+		180A8A171B671751007FB298 /* 气泡.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "气泡.jpg"; sourceTree = "<group>"; };
+		180A8A181B671751007FB298 /* 定位.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "定位.jpg"; sourceTree = "<group>"; };
+		180A8A191B671751007FB298 /* 好友.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "好友.jpg"; sourceTree = "<group>"; };
+		180A8A1E1B671C8D007FB298 /* 录制语音.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "录制语音.jpg"; sourceTree = "<group>"; };
+		180A8A221B675695007FB298 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		180A8A241B6756AC007FB298 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		180A8A261B676389007FB298 /* 录制中.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "录制中.jpg"; sourceTree = "<group>"; };
+		180A8A271B676389007FB298 /* 未录制.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "未录制.jpg"; sourceTree = "<group>"; };
+		180A8A2A1B676574007FB298 /* 播放.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "播放.jpg"; sourceTree = "<group>"; };
+		180A8A2B1B676574007FB298 /* 暂停.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "暂停.jpg"; sourceTree = "<group>"; };
+		180A8A2C1B676574007FB298 /* 重录.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "重录.jpg"; sourceTree = "<group>"; };
 		184D63B21B4E4FC700EFDE64 /* JiLaoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiLaoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D63B61B4E4FC700EFDE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184D63B71B4E4FC700EFDE64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +180,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180A8A251B6756AC007FB298 /* CoreAudio.framework in Frameworks */,
+				180922761B69BD5D00D81CBA /* libDJ_CommunicationSDK.a in Frameworks */,
+				180A8A231B675695007FB298 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,9 +196,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180922731B69BB5B00D81CBA /* DJ_SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				180922741B69BC7700D81CBA /* DJ_CommunicationSDK.h */,
+				180922751B69BD5D00D81CBA /* libDJ_CommunicationSDK.a */,
+			);
+			name = DJ_SDKs;
+			sourceTree = "<group>";
+		};
 		184D63A91B4E4FC700EFDE64 = {
 			isa = PBXGroup;
 			children = (
+				180A8A241B6756AC007FB298 /* CoreAudio.framework */,
+				180A8A221B675695007FB298 /* AVFoundation.framework */,
 				184D63B41B4E4FC700EFDE64 /* JiLaoDemo */,
 				184D63CE1B4E4FC800EFDE64 /* JiLaoDemoTests */,
 				184D63B31B4E4FC700EFDE64 /* Products */,
@@ -183,12 +228,14 @@
 		184D63B41B4E4FC700EFDE64 /* JiLaoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				180922731B69BB5B00D81CBA /* DJ_SDKs */,
 				18C5BC0E1B66296D0017161E /* DJ_Views */,
 				18C5BC0D1B66295D0017161E /* DJ_Libs */,
 				18C5BC0C1B66293A0017161E /* DJ_BaseViewControllers */,
 				18C5BC0B1B6629260017161E /* DJ_Images */,
 				184D63B91B4E4FC800EFDE64 /* AppDelegate.h */,
 				184D63BA1B4E4FC800EFDE64 /* AppDelegate.m */,
+				180869AD1B68C1AD00B17CD6 /* DJ_Common.h */,
 				184D63BF1B4E4FC800EFDE64 /* Main.storyboard */,
 				184D63C21B4E4FC800EFDE64 /* Images.xcassets */,
 				184D63C41B4E4FC800EFDE64 /* LaunchScreen.xib */,
@@ -227,6 +274,16 @@
 		18C5BC0B1B6629260017161E /* DJ_Images */ = {
 			isa = PBXGroup;
 			children = (
+				180A8A2A1B676574007FB298 /* 播放.jpg */,
+				180A8A2B1B676574007FB298 /* 暂停.jpg */,
+				180A8A2C1B676574007FB298 /* 重录.jpg */,
+				180A8A261B676389007FB298 /* 录制中.jpg */,
+				180A8A271B676389007FB298 /* 未录制.jpg */,
+				180A8A1E1B671C8D007FB298 /* 录制语音.jpg */,
+				180A8A161B671751007FB298 /* 语音.jpg */,
+				180A8A171B671751007FB298 /* 气泡.jpg */,
+				180A8A181B671751007FB298 /* 定位.jpg */,
+				180A8A191B671751007FB298 /* 好友.jpg */,
 				18C5BC451B664ECB0017161E /* buy.png */,
 				18C5BC461B664ECB0017161E /* relpace.png */,
 				18C5BC471B664ECB0017161E /* sale.png */,
@@ -316,6 +373,8 @@
 			children = (
 				18C5BC4F1B6651F70017161E /* DJ_OtherItemsViewVoice.h */,
 				18C5BC501B6651F70017161E /* DJ_OtherItemsViewVoice.m */,
+				180869AA1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.h */,
+				180869AB1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.m */,
 			);
 			name = DJ_OtherItemsViewVoice;
 			sourceTree = "<group>";
@@ -440,21 +499,31 @@
 				18D6A61A1B575DEE00A6968F /* ELCAlbumPickerController.xib in Resources */,
 				18D6A61C1B575DEE00A6968F /* ELCAssetTablePicker.xib in Resources */,
 				18C5BC4B1B664ECB0017161E /* sale.png in Resources */,
+				180A8A2E1B676574007FB298 /* 暂停.jpg in Resources */,
 				18D6A61D1B575DEE00A6968F /* Overlay.png in Resources */,
 				184D63C11B4E4FC800EFDE64 /* Main.storyboard in Resources */,
+				180A8A1A1B671751007FB298 /* 语音.jpg in Resources */,
 				18C5BC4C1B664ECB0017161E /* supply.png in Resources */,
 				184D63E31B4E509100EFDE64 /* 增加选择图片按钮.png in Resources */,
 				18D6A61E1B575DEE00A6968F /* Overlay@2x.png in Resources */,
+				180A8A291B676389007FB298 /* 未录制.jpg in Resources */,
 				184D63E51B4E52B200EFDE64 /* chatAddDocButton.png in Resources */,
 				18C5BC4A1B664ECB0017161E /* relpace.png in Resources */,
+				180A8A1D1B671751007FB298 /* 好友.jpg in Resources */,
 				184D63C61B4E4FC800EFDE64 /* LaunchScreen.xib in Resources */,
 				184D63E71B4E52BB00EFDE64 /* qzone_edit_face_drawable.jpg in Resources */,
 				184D63E21B4E509100EFDE64 /* 选择照片按钮.png in Resources */,
 				18C5BC491B664ECB0017161E /* buy.png in Resources */,
 				184D63C31B4E4FC800EFDE64 /* Images.xcassets in Resources */,
+				180A8A281B676389007FB298 /* 录制中.jpg in Resources */,
+				180A8A1B1B671751007FB298 /* 气泡.jpg in Resources */,
+				180A8A2F1B676574007FB298 /* 重录.jpg in Resources */,
 				184D63E11B4E509100EFDE64 /* 图片右上角删除按钮.png in Resources */,
+				180A8A1C1B671751007FB298 /* 定位.jpg in Resources */,
 				18D6A61B1B575DEE00A6968F /* ELCAssetPicker.xib in Resources */,
+				180A8A2D1B676574007FB298 /* 播放.jpg in Resources */,
 				184D63F11B4E5E4B00EFDE64 /* keyboard.png in Resources */,
+				180A8A201B671C8D007FB298 /* 录制语音.jpg in Resources */,
 				184D63F21B4E5E4B00EFDE64 /* keyboard@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +559,7 @@
 				18D6A6131B575DEE00A6968F /* ELCAlbumPickerController.m in Sources */,
 				18D6A5EE1B57438E00A6968F /* DJ_BaseView.m in Sources */,
 				18D6A6161B575DEE00A6968F /* ELCAssetTablePicker.m in Sources */,
+				180869AC1B68BE1800B17CD6 /* DJ_VoiceRecordHelper.m in Sources */,
 				18D6A6181B575DEE00A6968F /* ELCImagePickerController.m in Sources */,
 				18D6A6151B575DEE00A6968F /* ELCAssetCell.m in Sources */,
 				18D6A6141B575DEE00A6968F /* ELCAsset.m in Sources */,
@@ -631,6 +701,10 @@
 				INFOPLIST_FILE = JiLaoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JiLaoDemo",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -645,6 +719,10 @@
 				INFOPLIST_FILE = JiLaoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JiLaoDemo",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

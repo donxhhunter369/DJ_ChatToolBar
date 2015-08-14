@@ -21,9 +21,15 @@
         [self.layer setMasksToBounds:YES];
         [self setBackgroundColor:[UIColor whiteColor]];
         [self addSubview:self.selectionButton];
-        [self addSubview:self.badgeView];
+        
     }
     return self;
+}
+-(void)setItemType:(OtherSelectionsViewItemType)itemType{
+    _itemType = itemType;
+    if (itemType == OtherSelectionsViewItemTypeImage) {
+        [self addSubview:self.badgeView];
+    }
 }
 -(DJ_BadgeAlertView *)badgeView{
     if (!_badgeView) {
